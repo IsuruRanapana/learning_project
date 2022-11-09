@@ -36,6 +36,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_flavorizr: ^2.1.4
+  freezed_annotation: ^2.2.0
+  json_annotation: ^4.7.0
+  dartz: ^0.10.1
+  uuid: ^3.0.6
+
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +53,9 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  build_runner: ^2.3.2
+  freezed: ^2.2.1
+  json_serializable: ^6.5.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -89,3 +98,49 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+
+  flavors:
+    dev:
+      app:
+        name: "Dev App"
+
+      android:
+        applicationId: "com.example.learning_project_dev"
+
+      ios:
+        bundleId: "com.example.learning_project_dev"
+
+    qa:
+      app:
+        name: "QA App"
+
+      android:
+        applicationId: "com.example.learning_project_qa"
+
+      ios:
+        bundleId: "com.example.learning_project_qa"
+
+    uat:
+      app:
+        name: "UAT App"
+
+      android:
+        applicationId: "com.example.learning_project_uat"
+
+      ios:
+        bundleId: "com.example.learning_project_uat"
+
+    prod:
+      app:
+        name: "Production App"
+
+      android:
+        applicationId: "com.example.learning_project_prod"
+
+      ios:
+        bundleId: "com.example.learning_project_prod"
