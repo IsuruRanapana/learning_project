@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "910272864456",
+    "project_id": "learning-ddd-practice",
+    "storage_bucket": "learning-ddd-practice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910272864456:android:7c102c2c098386fda5c5fd",
+        "android_client_info": {
+          "package_name": "com.example.learning_project_dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910272864456-k1cbplb2en7f442h809qmp6g776cd8nb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLVxqAO-rGYpsf_WctuQiTmwFveVxOZCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910272864456-k1cbplb2en7f442h809qmp6g776cd8nb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
