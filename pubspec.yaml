@@ -45,6 +45,23 @@ dependencies:
   firebase_core: ^2.1.1
   firebase_auth: ^4.1.1
   google_sign_in: ^5.4.2
+  auto_route: ^5.0.2
+  get_it: ^7.2.0
+  meta: ^1.8.0
+  cloud_firestore: ^4.0.5
+  injectable: ^1.5.4
+  another_flushbar: ^1.12.29
+  styled_widget: ^0.4.1
+  flutter_hooks: ^0.18.5+1
+  time: ^2.1.3
+  kt_dart: ^1.0.0
+  rxdart: ^0.27.5
+  reorderables: ^0.5.1
+  provider: ^6.0.4
+  implicitly_animated_reorderable_list_2: ^0.4.4
+  flutter_slidable: ^2.0.0
+  auto_route_generator: ^5.0.3
+  injectable_generator: ^1.5.5
 
 
 dev_dependencies:

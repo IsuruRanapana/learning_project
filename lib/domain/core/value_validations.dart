@@ -1,3 +1,4 @@
+import 'package:kt_dart/kt.dart';
 import 'package:learning_project/domain/core/failures.dart';
 import 'package:dartz/dartz.dart';
 
@@ -5,6 +6,47 @@ import 'package:dartz/dartz.dart';
 /// ***     Eyepax IT Consulting     *** ///
 /// ***   on 11/9/2022 => 12:18 PM  *** ///
 
+Either<ValueFailure<String>, String> validateMaxStringLength(
+    String input,
+    int maxLength,
+    ) {
+  if (input.length <= maxLength) {
+    return right(input);
+  } else {
+    return left(ValueFailure.exceedingLength(
+      failedValue: input,
+      max: maxLength,
+    ));
+  }
+}
+
+Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
+  if (input.isEmpty) {
+    return left(ValueFailure.empty(failedValue: input));
+  } else {
+    return right(input);
+  }
+}
+
+Either<ValueFailure<String>, String> validateSingleLine(String input) {
+  if (input.contains('\n')) {
+    return left(ValueFailure.multiline(failedValue: input));
+  } else {
+    return right(input);
+  }
+}
+
+Either<ValueFailure<KtList<T>>, KtList<T>> validateMaxListLength<T>(
+    KtList<T> input, int maxLength) {
+  if (input.size <= maxLength) {
+    return right(input);
+  } else {
+    return left(ValueFailure.listTooLong(
+      failedValue: input,
+      max: maxLength,
+    ));
+  }
+}
 
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =

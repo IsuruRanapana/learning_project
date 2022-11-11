@@ -59,7 +59,7 @@ class DefaultFirebaseOptions {
     projectId: 'learning-ddd-practice',
     storageBucket: 'learning-ddd-practice.appspot.com',
   );
- 
+
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCTcWbhmQus2ZYrzORJetjNy5CqGOgFaMY',
     appId: '1:910272864456:ios:9cc2f975d6226214a5c5fd',

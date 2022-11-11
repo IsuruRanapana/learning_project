@@ -2,6 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:learning_project/domain/core/errors.dart';
 import 'package:learning_project/domain/core/failures.dart';
+import 'package:learning_project/domain/core/value_validations.dart';
 import 'package:uuid/uuid.dart';
 
 /// *** Created By Isuru B. Ranapana *** ///
@@ -17,6 +18,10 @@ abstract class ValueObject<T> {
   /// Throws [UnexpectedValueError] containing the [ValueFailure]
   T getOrCrash() {
     return value.fold((f) => throw UnexpectedValueError(f), id);
+  }
+
+  T getOrElse(T dflt) {
+    return value.getOrElse(() => dflt);
   }
 
   Either<ValueFailure<dynamic>, Unit> get failureOrUnit {
@@ -59,4 +64,17 @@ class UniqueId extends ValueObject<String> {
   }
 
   const UniqueId._(this.value);
+}
+class StringSingleLine extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+
+  factory StringSingleLine(String input) {
+    assert(input != null);
+    return StringSingleLine._(
+      validateSingleLine(input),
+    );
+  }
+
+  const StringSingleLine._(this.value);
 }
